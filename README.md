@@ -1,11 +1,16 @@
-HandWave
+# HandWave
 ========
 
-HandWave is an Android library that allows developers to add touch free capabilities to their mobile applications.
+> An Android library that allows developers to add touch free capabilities to their mobile applications.
+
+## Overview
+This README is still in progress and will be updated soon.
 
 
-This code was initially created by Leeran Raphaely (leeran.raphaely@gmail.com), but has been modified and changed to reduce errors and improve speed.
 
-This readme will be updated soon and demo mobile apps using HandWave will be added to this Github repo.
+## Acknowledgements
+The code for this library was initially created by Leeran Raphaely (leeran.raphaely@gmail.com). 
+It has since been modified to fix bugs in the code and improve the overall speed of the algorithms.  
+The changes were made by Krittika D'Silva (krittika.dsilva@gmail.com) and Nicola Dell (nixdell@cs.washington.edu).
 
-These apps were developed by Krittika D'Silva (kdsilva@uw.edu) and Nicola Dell (nixdell@cs.washington.edu).
+
