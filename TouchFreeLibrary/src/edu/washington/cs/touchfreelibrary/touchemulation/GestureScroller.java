@@ -216,6 +216,7 @@ public class GestureScroller implements CameraGestureSensor.Listener {
 		setRightPosition(viewScreenCoords[0] + view.getWidth() - margins, yPos);
 	}
 	
+	/**  Called when an upwards gesture is detected - scrolls upwards. 	 */
 	@Override
 	public void onGestureUp(CameraGestureSensor caller, long gestureLength) {
 		if(mVerticalScrollEnabled && mIsRunning && mTopPoint.x >= 0 && mBottomPoint.x >= 0) {
@@ -226,6 +227,7 @@ public class GestureScroller implements CameraGestureSensor.Listener {
 		}
 	}
 
+	/** Called when a downwards gesture is detected - scrolls downwards. */
 	@Override
 	public void onGestureDown(CameraGestureSensor caller, long gestureLength) {
 		if(mVerticalScrollEnabled && mIsRunning && mTopPoint.x >= 0 && mBottomPoint.x >= 0) {
@@ -236,6 +238,7 @@ public class GestureScroller implements CameraGestureSensor.Listener {
 		}
 	}
 
+	/** Called when a leftwards gesture is detected - scrolls to the left. */
 	@Override
 	public void onGestureLeft(CameraGestureSensor caller, long gestureLength) {
 		if(mHorizontalScrollEnabled && mIsRunning && mLeftPoint.x >= 0 && mRightPoint.x >= 0) {
@@ -245,7 +248,8 @@ public class GestureScroller implements CameraGestureSensor.Listener {
 				sendCursorDragEvent(mRightPoint, mLeftPoint, (int)(gestureLength / 6));
 		}
 	}
-
+	
+	/** Called when a rightwards gesture is detected - scrolls right. */
 	@Override
 	public void onGestureRight(CameraGestureSensor caller, long gestureLength) {
 		if(mHorizontalScrollEnabled && mIsRunning && mLeftPoint.x >= 0 && mRightPoint.x >= 0) {
@@ -256,7 +260,7 @@ public class GestureScroller implements CameraGestureSensor.Listener {
 		}
 	}
 	
-	// use a simplified case of a cubic Hermite spline to smoothly calculate the position
+	/** Uses a simplified case of a cubic Hermite spline to smoothly calculate the position */
 	private Point calculateSplinePosition(Point p1, Point p2, int time, int steps) {
 		double percentDone = (double)time / (double)steps;
 		
@@ -264,7 +268,7 @@ public class GestureScroller implements CameraGestureSensor.Listener {
 		return new Point((int)((1 - s) * p1.x + s * p2.x), (int)((1 - s) * p1.y + s * p2.y));
 	}
 
-	// invokes a fake drag using instrumentation. p1 and p2 are in screen space
+	/** Invokes a fake drag using instrumentation. p1 and p2 are in screen space */
 	private void sendCursorDragEvent(final Point p1, final Point p2, final int stepCount) {
 		// run the touch event
 		new Thread() {

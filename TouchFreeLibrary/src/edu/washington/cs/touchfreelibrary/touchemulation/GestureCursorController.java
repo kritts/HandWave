@@ -54,10 +54,10 @@ public class GestureCursorController implements CameraGestureSensor.Listener, Cl
 	
 	private long mMinimumGestureLength;
 	
-	// This click sensor sets the cursors velocity to 0 instead of triggering a click
+	/** This click sensor sets the cursors velocity to 0 instead of triggering a click */
 	private ClickSensor mStopClickSensor;
 	
-	// create the animation timer
+	/** create the animation timer */
 	private class AnimationTimerTask extends TimerTask {
 		@Override
 		public void run() {
