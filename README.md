@@ -3,8 +3,20 @@
 
 > An Android library that allows developers to add touch free capabilities to their mobile applications.
 
-## Overview
-This README is still in progress and will be updated soon.
+## Overview 
+HandWave uses the built-in, forward-facing camera on a device and computer vision to recognize users’ in-air gestures. The API provides application developers with easy, high-level access to a variety of touch-free gestures that can be detected using any commodity smartphone equipped with a basic forward-facing camera. 
+
+Example apps using the HandWave library can be found [here] (https://github.com/kritts/HandWave-Sample-Apps).
+
+The code for the library is all available if you'd like to make changes. However, the .jar file is also available if not. Further details about how to use the library in your code is included below. 
+
+
+A video demonstrating capabilities of the library can be found here:
+[![Video demonstrating HandWave's function](http://img.youtube.com/vi/ws8UipMmJLE/0.jpg)](http://youtu.be/ws8UipMmJLE)
+
+## Using the HandWave library
+
+To use this library, you must pur 
 
 
 
