@@ -8,7 +8,7 @@ HandWave uses the built-in, forward-facing camera on a device and computer visio
 
 Example apps using the HandWave library can be found [here] (https://github.com/kritts/HandWave-Sample-Apps).
 
-The code for the library is all available if you'd like to make changes. However, the .jar file is also available if not. Further details about how to use the library in your code is included below. 
+The code for the library is all available if you'd like to make changes. However, the .jar file is also available if not. Further details about how to use the library in your code are included below. 
 
 
 A video demonstrating capabilities of the library can be found here:
@@ -16,7 +16,12 @@ A video demonstrating capabilities of the library can be found here:
 
 ## Using the HandWave library
 
-To use this library, you must pur 
+To use this library, there are two libraries you need to put into your app's /lib folder: touchfreelibrary.jar and opencv library - 2.4.3.jar. 
+It's up to you which version of OpenCV you'd like to use (all of the recent versions should work just fine), but the 2.4.3 is the version I used during development. 
+A copy of the touchfreelibrary.jar can be found here: 
+A copy of the opencvlibrary.jar can be found here: 
+
+
 
 
 
