@@ -4,7 +4,8 @@
 > An Android library that allows developers to add touch free capabilities to their mobile applications.
 
 ## Overview 
-HandWave uses the built-in, forward-facing camera on a device and computer vision to recognize users’ in-air gestures. The API provides application developers with easy, high-level access to a variety of touch-free gestures that can be detected using any commodity smartphone equipped with a basic forward-facing camera. 
+HandWave is a library that allows developers to enable touch-free interactions in their apps. 
+HandWave uses the built-in, forward-facing camera on a device to recognize users’ in-air gestures. The API provides developers with easy access to a variety of touch-free gestures which invoke callback functions when detected. 
 
 Example apps using the HandWave library can be found [here] (https://github.com/kritts/HandWave-Sample-Apps).
 
@@ -12,14 +13,31 @@ The code for the library is all available if you'd like to make changes. However
 
 
 A video demonstrating capabilities of the library can be found here:
-[![Video demonstrating HandWave's function](http://img.youtube.com/vi/ws8UipMmJLE/0.jpg)](http://youtu.be/ws8UipMmJLE)
+<p align="center">
+	[![Video demonstrating HandWave's function](http://img.youtube.com/vi/ws8UipMmJLE/0.jpg)](http://youtu.be/ws8UipMmJLE)
+</p>
 
-## Using the HandWave library
+## Using the HandWave library 
 
-To use this library, there are two libraries you need to put into your app's /lib folder: touchfreelibrary.jar and opencv library - 2.4.3.jar. 
-It's up to you which version of OpenCV you'd like to use (all of the recent versions should work just fine), but the 2.4.3 is the version I used during development. 
-A copy of the touchfreelibrary.jar can be found here: 
-A copy of the opencvlibrary.jar can be found here: 
+I primarily use Eclipse for development therefore the instructions below are for Eclipse.
+I may add additional instructions later for Android Studio.
+
+1. Clone the repo: 'git clone https://github.com/kritts/HandWave.git'
+1. Import `TouchFreeLibrary` **as a library**
+    1. Click **File | Import | Android | Existing Android Code into Workspace**
+    1. Select the `TouchFreeLibrary` project
+    1. Click **Finish**
+    1. Right-click on `TouchFreeLibrary`, then click **Properties**
+    1. In the project properties window, click the **Android** section
+    1. Check the **Is Library** checkbox
+    1. Add a reference to the `TouchFreeLibrary` project (click **Remove** to remove any broken references, then click **Add** to add the correct one)
+	1. You will also need to need to add opencv as a library. Detailed instructions on how to do so can be found [here](https://github.com/Itseez/opencv/blob/master/doc/tutorials/introduction/java_eclipse/java_eclipse.rst).
+		1. It's up to you which version of OpenCV you'd like to use (all of the recent versions should work just fine), but the 2.4.3 is the version I used during development. 
+		1. A copy of the both libraries are available [here] (https://github.com/kritts/HandWave/tree/master/TouchFreeLibrary/bin).
+1. Add the required permissions to your application's AndroidManifest file.
+<p align="center">
+	`<uses-permission android:name="android.permission.CAMERA" />` 
+</p>
 
 
 
