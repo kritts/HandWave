@@ -26,7 +26,7 @@ I plan to add instructions for Android Studio later.
     1. In the project properties window, click the **Android** section
     1. Check the **Is Library** checkbox
     1. Add a reference to the `TouchFreeLibrary` project (click **Remove** to remove any broken references, then click **Add** to add the correct one)
-	1. You will also need to need to add opencv as a library. Detailed instructions on how to do so can be found [here](https://github.com/Itseez/opencv/blob/master/doc/tutorials/introduction/java_eclipse/java_eclipse.rst).
+	1. You will also need to need to add OpenCV as a library. Detailed instructions on how to do so can be found [here](https://github.com/Itseez/opencv/blob/master/doc/tutorials/introduction/java_eclipse/java_eclipse.rst).
 		1. It's up to you which version of OpenCV you'd like to use (all of the recent versions should work just fine), but the 2.4.3 is the version I used during development. 
 
 
@@ -37,11 +37,9 @@ Complete examples of each can be found [here](https://github.com/kritts/HandWave
 ### Setting up an activity
 You will need to initialize the OpenCV library in your code. To do this, you can add the following lines of code:
 I'd recommend adding this line in `onCreate`: 
-
 `OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_2_4_3, this, mLoaderCallback);`
 
 And then the following lines of code elsewhere:
-
 ```java
 	/** OpenCV library initialization. */
 	private BaseLoaderCallback mLoaderCallback = new BaseLoaderCallback(this) {
@@ -89,22 +87,12 @@ When you implement a ClickSensor, there is one method you must implement: `onSen
 ### Implementing a CameraGestureSensor
 
 Creating an instance of CameraGestureSensor can be done as follows:
-
 `CameraGestureSensor mGestureSensor = new CameraGestureSensor(this);`
 
-
 For your activity to be a gesture or click listener (which I'd recommend), you should include the following lines of code:
-
 `mGestureSensor.addGestureListener(this);` or `mGestureSensor.addClickListener(this);`
 
-To start the instance of the CameraGestureSensor, use the start method: `mGestureSensor.start();` 
-
-I'd recommend doing this in `onResume`.
-
-
-To stop the instance of the CameraGestureSensor, use the stop method: `mGestureSensor.stop();` 
-
-I'd recommend doing this in `onPause`.
+To start the instance of the CameraGestureSensor, use the start method: `mGestureSensor.start();`. I'd recommend doing this in `onResume`. To stop the instance of the CameraGestureSensor, use the stop method: `mGestureSensor.stop();`. I'd recommend doing this in `onPause`.
 
 
 ## Acknowledgements
