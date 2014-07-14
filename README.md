@@ -13,16 +13,15 @@ The code for the library is all available if you'd like to make changes. However
 
 
 A video demonstrating capabilities of the library can be found here:
-<p align="center">
-	[![Video demonstrating HandWave's function](http://img.youtube.com/vi/ws8UipMmJLE/0.jpg)](http://youtu.be/ws8UipMmJLE)
-</p>
+[![Video demonstrating HandWave's function](http://img.youtube.com/vi/ws8UipMmJLE/0.jpg)](http://youtu.be/ws8UipMmJLE)
+
 
 ## Using the HandWave library 
 
 I primarily use Eclipse for development therefore the instructions below are for Eclipse.
 I may add additional instructions later for Android Studio.
 
-1. Clone the repo: 'git clone https://github.com/kritts/HandWave.git'
+1. Clone the repo: `git clone https://github.com/kritts/HandWave.git`
 1. Import `TouchFreeLibrary` **as a library**
     1. Click **File | Import | Android | Existing Android Code into Workspace**
     1. Select the `TouchFreeLibrary` project
@@ -34,13 +33,7 @@ I may add additional instructions later for Android Studio.
 	1. You will also need to need to add opencv as a library. Detailed instructions on how to do so can be found [here](https://github.com/Itseez/opencv/blob/master/doc/tutorials/introduction/java_eclipse/java_eclipse.rst).
 		1. It's up to you which version of OpenCV you'd like to use (all of the recent versions should work just fine), but the 2.4.3 is the version I used during development. 
 		1. A copy of the both libraries are available [here] (https://github.com/kritts/HandWave/tree/master/TouchFreeLibrary/bin).
-1. Add the required permissions to your application's AndroidManifest file.
-<p align="center">
-	`<uses-permission android:name="android.permission.CAMERA" />` 
-</p>
-
-
-
+1. Remember to add the required permissions to your application's AndroidManifest file: `<uses-permission android:name="android.permission.CAMERA" />`  
 
 
 ## Acknowledgements
