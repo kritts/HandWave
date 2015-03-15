@@ -6,7 +6,7 @@ OPENCV_LIB_TYPE:=STATIC
 OPENCV_INSTALL_MODULES:=on
 
 include /Users/nixdell/Desktop/HandsFree/HandsFree-master/sdk/native/jni/OpenCV.mk
-
+	
 LOCAL_MODULE    := touch_free_library
 LOCAL_SRC_FILES := motion_averager.cpp
 LOCAL_LDLIBS +=  -llog -ldl
