@@ -144,6 +144,7 @@ public class CameraGestureSensor extends ClickSensor {
 	 * OpenCV is initiated.
 	 */
 	static public void loadLibrary() {
+		Log.e("CameraGestureSensor", "Loading library!");
 		System.loadLibrary("touch_free_library");
 	}
 	
@@ -164,11 +165,15 @@ public class CameraGestureSensor extends ClickSensor {
 	{
 		Camera mCam = Camera.open(cameraId);
 		Camera.Parameters params = mCam.getParameters();
-
-		params.set("iso", "400"); // values can be "auto", "100", "200", "400", "800", "1600"
+		List<Camera.Size> previewSizes = params.getSupportedPreviewSizes();
+		Log.e("CameraGesureSensor", "Determining size");
+		//params.set("iso", "auto"); // values can be "auto", "100", "200", "400", "800", "1600"
 		params.setExposureCompensation(2);
 		params.setWhiteBalance("fluorescent");
 		
+		Camera.Size previewSize = previewSizes.get(0);
+		
+		params.setPreviewSize(previewSize.width, previewSize.height);
 		mCam.setParameters(params);
 		mCam.release();
 	}
