@@ -96,9 +96,9 @@ To start the instance of the CameraGestureSensor, use the start method: `mGestur
 
 
 ## Acknowledgements
-The code for this library was initially created by Leeran Raphaely (leeran.raphaely@gmail.com). 
+The code for this library was initially created by Leeran Raphaely.
 It has since been modified to fix bugs in the code and improve the overall speed of the algorithms.  
-The changes were made by Krittika D'Silva (krittika.dsilva@gmail.com) and Nicola Dell (nixdell@cs.washington.edu).
+The changes were made by Krittika D'Silva and Nicola Dell.
 
 
 

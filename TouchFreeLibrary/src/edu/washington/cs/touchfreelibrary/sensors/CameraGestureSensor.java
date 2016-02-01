@@ -188,7 +188,7 @@ public class CameraGestureSensor extends ClickSensor {
 		mCameraId = getFrontCameraId();
 		
 		//Try manipulate some settings on the camera
-		setCameraSettings(mCameraId);
+		//setCameraSettings(mCameraId);
 		
 		mContext = context;
 	}
